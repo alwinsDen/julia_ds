@@ -1,0 +1,4 @@
+name = "julia_ds"
+uuid = "42a8b426-75ba-4112-ace3-a207798f6fdd"
+authors = ["alwint "]
+version = "0.1.0"
