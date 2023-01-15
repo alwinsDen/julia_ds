@@ -137,3 +137,74 @@ hello * goodbye
 join(["Hello ","Alwin T"])
 # String concatenation method 3
 "$hello $goodbye"
+# string manipulation
+julia_string = "hey Hey there this here is a test string"
+contains(julia_string, "hey")
+startswith(julia_string, "hey")
+endswith(julia_string,"stribg")
+lowercase(julia_string) #converts entire string to lowercase
+uppercase(julia_string)
+titlecase(julia_string) #for first letters of words
+lowercasefirst(julia_string)
+split(julia_string," ")
+# parse to string
+numerical = 2304239234
+string(numerical)
+typeof(parse(Int64, "123"))
+tryparse(Int64, "A") #this will return `nothing`
+#tuples in Julia
+my_tuples = (1,3,5,"test")
+my_tuples[2]
+map((x,y,z)->x*y-z, 2,3,4)
+#named_tuples
+test_tuple = (s=1, v=2)
+test_tuple.s
+#ranges
+[x for x in 1:10]
+#start:ste:stop ranges
+1.0:.2:10.0
+# collect
+collect(1:10)
+# arrays
+my_array = ["text",1,"sample"]
+# array contruction using undefined 1D
+my_vector = Vector{Float64}(undef,10)
+# array contruction using undefined 2D
+my_big_vector = Matrix{Float64}(undef,10,2)
+# aliases
+my_vector_zeroes = zeros(10)
+my_vector_ones = ones(Int64,10,2)
+# fill! 
+my_matrix = Matrix{Float64}(undef,2,2)
+fill!(my_matrix,3.14)
+# creating matrices
+test = [[1,2]
+[3,4]]
+Bool[0,1,1,0]
+[ones(Int64,2,2) zeros(Int64,2,2)]
+# weird matrix formations
+[ones(Int64,2,2) [2;3]
+[3 4]          5]
+# multiple loops
+[(x,y) for x in 1:10 for y in 1:2]
+# conditional
+[x for x in 0:10 if iseven(x)] #isodd is also available
+# concatenate arrays #dims is the dimention
+cat(ones(Int64,2),zeros(Float64,2),dims=2)
+# shorthand of dims=1
+vcat(ones(Int64,5,4), zeros(Float64,3,4))
+# dims=2
+hcat(ones(Int64,4,4), zeros(Float64,4,3))
+# length
+test_vec = ones(Float64,10,5)
+length(test_vec)
+size(test_vec)
+# array indexing and slicing
+my_example_vector = [1,2,4,5]
+my_example_vector = [[1 2 3]
+                    [4 5 6]
+                    [7 8 9]]
+my_example_vector[3,1]
+# indexing keywords
+my_example_vector[end-1]
+my_example_vector[begin,end-1] #first row, second last element
